@@ -1,1 +1,15 @@
+{
+  "name": "Elsternos Assistance",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "!test"
+  },
+  "author": "VecTruM",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
 
