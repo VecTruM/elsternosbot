@@ -1,12 +1,12 @@
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const bot = new Discord.Client()
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`)
+bot.on('ready', () => {
+  console.log(`Logged in as ${bot.user.tag}!`)
 })
 
 
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
 
   let serverTag = member.guild.name
   const welcomechannel = member.guild.channels.find('id', '533916299240407070')
@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member => {
   return welcomechannel.send({embed})
 });
 
-client.on('guildMemberRemove', member => {
+bot.on('guildMemberRemove', member => {
 
   let serverTag = member.guild.name
   const welcomechannel = member.guild.channels.find('id', '533916299240407070')
@@ -30,7 +30,7 @@ client.on('guildMemberRemove', member => {
 
 //__INFORMATIONS__//
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '+' + 'information') {
   var sinfo_embed = new Discord.RichEmbed()
                      .setColor('#C11C19')
@@ -45,7 +45,7 @@ client.on('message', message => {
 
 //KICK
 
-  client.on('message', message => {
+  bot.on('message', message => {
     if (!message.guild) return;
     if (message.content.startsWith('+kick')) {
       const user = message.mentions.users.first();
@@ -71,7 +71,7 @@ client.on('message', message => {
 
 //BAN
 
-client.on('message', message => {
+bot.on('message', message => {
     if (!message.guild) return;
     if (message.content.startsWith('+ban')) {
       const user = message.mentions.users.first();
@@ -97,7 +97,7 @@ client.on('message', message => {
 
 //________COMMANDES________//
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '+' + 'ping') {
   message.channel.send("Pong ! `" + bot.ping + "ms`")
   .catch((err) => {
@@ -105,7 +105,7 @@ client.on('message', message => {
  }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '+' + 'ip') {
   message.channel.send("Ip : elsternos.inovaperf.fr :white_check_mark: ")
   .catch((err) => {
@@ -113,7 +113,7 @@ client.on('message', message => {
  }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '+' + 'site') {
   message.channel.send("https://elsternos.netlify.com")
   .catch((err) => {
@@ -122,7 +122,7 @@ client.on('message', message => {
 })
 
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === '+' + 'help') {
   var help_embed = new Discord.RichEmbed()
                  .setColor('#C11C19')
@@ -144,122 +144,122 @@ client.on('message', message => {
   }
  })
 
-client.on('ready', () => { client.user.setGame('elsternos.inovaperf.fr') })
+bot.on('ready', () => { bot.user.setGame('elsternos.inovaperf.fr') })
 
 
 //______MESSAGE AUTOMATIQUE______//
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Bonjour') {
     message.reply('Bonjour !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Bjr') {
     message.reply('Bonjour, la vie est belle')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'bjr') {
     message.reply('Bonjour')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'cc') {
     message.reply('Coucou toi !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'slt') {
     message.reply('Salut')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Slt') {
     message.reply('Salut on se connait ?')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Salut') {
     message.reply('Salut')
   }
 })
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Hello') {
     message.reply('Hello bienvenue sur Elsternos !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Yoch') {
     message.reply('Bonjour !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'yoch') {
     message.reply('Yo yo ')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Yo') {
     message.reply('Yooo !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'hello') {
     message.reply('Hey')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Hi') {
     message.reply('Hi men')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === ('Bonsoir')) {
     message.reply('Bonsoir !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'bonsoir') {
     message.reply('Bonsoir et bonne nuit !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Bsr') {
     message.reply('Bonsoir ')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'bsr') {
     message.reply('Bonsoir !')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'Hey') {
     message.reply('Hey hey')
   }
 })
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'hey') {
     message.reply('Hey ')
   }
 })
 
-client.login('NTU4NzQ5MjQzNDMxNDUyNjky.D3bXng.fn4DBmmJIaRA6oCVky_Tso0fDSA')
+bot.login('NTU4NzQ5MjQzNDMxNDUyNjky.D3bXng.fn4DBmmJIaRA6oCVky_Tso0fDSA')
