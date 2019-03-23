@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const Discord = require('Procfile')
 const Discord = require('package.json')
+const Discord = require('node_modules')
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`)
