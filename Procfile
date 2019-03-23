@@ -1,1 +1,1 @@
-worker : node index.js 
+worker : node /Users/gillard/Desktop/index.js 
